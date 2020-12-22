@@ -21,6 +21,6 @@ const httpServer = httpLib.createServer((request, masterResponse) => {
 });
 
 
-httpServer.listen($PORT || 3000, () => {
+httpServer.listen(process.env.PORT || 3000, () => {
     console.log('Server has started');
 });
