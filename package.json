@@ -1,0 +1,30 @@
+  
+{
+  "name": "deploytest",
+  "version": "1.0.0",
+  "description": "This node.js service is a deploy test.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarbutwilowski/deploytest.git"
+  },
+  "keywords": [
+    "deploytest"
+  ],
+  "author": "Edgar Butwilowski",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/edgarbutwilowski/deploytest/issues"
+  },
+  "homepage": "https://github.com/edgarbutwilowski/deploytest#readme",
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  },
+  "engines": {
+    "node": "14.9.0"
+  }  
+}
