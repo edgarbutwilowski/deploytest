@@ -16,7 +16,7 @@ const httpServer = httpLib.createServer((request, masterResponse) => {
     masterResponse.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
     masterResponse.setHeader('Access-Control-Allow-Headers', '*');
     
-    masterResponse.end("Dies ist ein Test.");
+    masterResponse.end("Dies ist ein Test 2.");
     
 });
 
