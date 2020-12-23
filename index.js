@@ -6,20 +6,6 @@ const urlLib = require('url');
 const httpsLib = require('https');
 const xml2jsLib = require('xml2js');
 
-function transformToCesiumBuildings(osmJSON, baseheight) {
-    let cesiumBuildings = ['Aha1', 'Aha2', 'Aha3'];
-    if(osmJSON && osmJSON.osm && osmJSON.osm.way){
-      for (let osmWay of osmJSON.osm.way) {
-        if (osmWay.tag && osmWay.tag != undefined && osmWay.tag != null) {
-            let isBuilding = false;
-            let height = undefined;
-            let buildingLevels = undefined;
-        }
-      }
-    }
-    return cesiumBuildings
-}
-
 
 function transformToCesiumBuildings(osmJSON, baseheight) {
     let cesiumBuildings = [];
