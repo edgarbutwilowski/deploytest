@@ -6,6 +6,11 @@ const urlLib = require('url');
 const httpsLib = require('https');
 const xml2jsLib = require('xml2js');
 
+function transformToCesiumBuildings(osmJSON, baseheight) {
+    let cesiumBuildings = ['Aha1', 'Aha2'];
+    return cesiumBuildings
+}
+
 const httpServer = httpLib.createServer((request, masterResponse) => {
     masterResponse.statusCode = 200;
     masterResponse.setHeader('Content-Type', 'application/json');
@@ -29,7 +34,8 @@ const httpServer = httpLib.createServer((request, masterResponse) => {
             response.on("end", () => {
                 const xmlParser = xml2jsLib.Parser();
                 xmlParser.parseString(osmData, (error, osmJSON) => {
-                     masterResponse.end("Dies ist ein Test 4.");
+                     let cesiumBuildings = transformToCesiumBuildings(osmJSON, + queryParams.baseheight);
+                     masterResponse.end(JSON.stringify(cesiumBuildings));
                 });
             });
         }).on("error", error => {
