@@ -15,9 +15,7 @@ const httpServer = httpLib.createServer((request, masterResponse) => {
     masterResponse.setHeader('Access-Control-Request-Method', '*');
     masterResponse.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
     masterResponse.setHeader('Access-Control-Allow-Headers', '*');
-    
-    masterResponse.end("Dies ist ein Test 3.");
- 
+     
     const queryParams = urlLib.parse(request.url, true).query;
 
     httpsLib.get("https://www.openstreetmap.org/api/0.6/map?bbox=" + queryParams.bbox,
@@ -31,8 +29,7 @@ const httpServer = httpLib.createServer((request, masterResponse) => {
             response.on("end", () => {
                 const xmlParser = xml2jsLib.Parser();
                 xmlParser.parseString(osmData, (error, osmJSON) => {
-                    let cesiumBuildings = transformToCesiumBuildings(osmJSON, + queryParams.baseheight);
-                    masterResponse.end(JSON.stringify(cesiumBuildings));
+                     masterResponse.end("Dies ist ein Test 4.");
                 });
             });
         }).on("error", error => {
