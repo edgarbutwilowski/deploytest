@@ -8,6 +8,13 @@ const xml2jsLib = require('xml2js');
 
 function transformToCesiumBuildings(osmJSON, baseheight) {
     let cesiumBuildings = ['Aha1', 'Aha2'];
+     for (let osmWay of osmJSON.osm.way) {
+        if (osmWay.tag != undefined) {
+            let isBuilding = false;
+            let height = undefined;
+            let buildingLevels = undefined;
+        }
+    }
     return cesiumBuildings
 }
 
